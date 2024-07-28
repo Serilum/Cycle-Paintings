@@ -1,6 +1,7 @@
 package com.natamus.cyclepaintings;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.cyclepaintings.neoforge.config.IntegrateNeoForgeConfig;
 import com.natamus.cyclepaintings.neoforge.events.NeoForgePaintingEvent;
 import com.natamus.cyclepaintings.util.Reference;
@@ -14,6 +15,10 @@ import net.neoforged.fml.event.lifecycle.FMLLoadCompleteEvent;
 public class ModNeoForge {
 	
 	public ModNeoForge(IEventBus modEventBus) {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		modEventBus.addListener(this::loadComplete);
 
 		setGlobalConstants();

@@ -1,6 +1,7 @@
 package com.natamus.cyclepaintings;
 
 import com.natamus.collective.check.RegisterMod;
+import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.cyclepaintings.data.Constants;
 import com.natamus.cyclepaintings.events.PaintingEvent;
 import com.natamus.cyclepaintings.util.Reference;
@@ -14,6 +15,10 @@ public class ModFabric implements ModInitializer {
 	
 	@Override
 	public void onInitialize() {
+		if (!ShouldLoadCheck.shouldLoad(Reference.MOD_ID)) {
+			return;
+		}
+
 		setGlobalConstants();
 		ModCommon.init();
 
