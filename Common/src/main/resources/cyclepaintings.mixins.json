@@ -1,9 +1,8 @@
 {
   "required": true,
   "minVersion": "0.8",
-  "package": "com.natamus.cyclepaintings.forge.mixin",
+  "package": "com.natamus.cyclepaintings.mixin",
   "compatibilityLevel": "JAVA_17",
-  "refmap": "cyclepaintings_forge.refmap.json",
   "mixins": [
 
   ],
