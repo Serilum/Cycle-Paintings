@@ -8,11 +8,9 @@ import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
 import net.neoforged.bus.api.SubscribeEvent;
-import net.neoforged.fml.common.EventBusSubscriber;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
 
-@EventBusSubscriber
 public class NeoForgePaintingEvent {
 	@SubscribeEvent
 	public static void onServerStart(ServerStartedEvent e) {
