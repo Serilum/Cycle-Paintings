@@ -2,7 +2,10 @@ package com.natamus.cyclepaintings;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
+import com.natamus.collective.fabric.callbacks.CollectiveBlockEvents;
+import com.natamus.collective.services.Services;
 import com.natamus.cyclepaintings.data.Constants;
+import com.natamus.cyclepaintings.events.BlockEvents;
 import com.natamus.cyclepaintings.events.PaintingEvent;
 import com.natamus.cyclepaintings.util.Reference;
 import com.natamus.cyclepaintings.util.Util;
@@ -40,6 +43,12 @@ public class ModFabric implements ModInitializer {
 		UseEntityCallback.EVENT.register((player, world, hand, entity, hitResult) -> {
 			return PaintingEvent.onClick(player, world, hand, entity, hitResult);
 		});
+
+		if (Services.MODLOADER.isModLoaded("fastpaintings")) {
+			CollectiveBlockEvents.BLOCK_RIGHT_CLICK.register((level, player, hand, pos, hitVec) -> {
+				return BlockEvents.onRightClickBlock(level, player, hand, pos, hitVec);
+			});
+		}
 	}
 
 	private static void setGlobalConstants() {
