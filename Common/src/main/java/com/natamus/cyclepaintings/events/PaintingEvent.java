@@ -13,9 +13,6 @@ import net.minecraft.world.item.Items;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.phys.EntityHitResult;
 
-import java.util.Collections;
-import java.util.List;
-
 public class PaintingEvent {
 	public static InteractionResult onClick(Player player, Level level, InteractionHand hand, Entity target, EntityHitResult hitResult) {
 		ItemStack handstack = player.getItemInHand(hand);
@@ -23,45 +20,17 @@ public class PaintingEvent {
 			return InteractionResult.PASS;
 		}
 		
-		if (!(target instanceof Painting)) {
-			return InteractionResult.PASS;
-		}
-		
-		Painting painting = (Painting)target;
-		Holder<PaintingVariant> currentVariant = painting.getVariant();
-		
-		Holder<PaintingVariant> newVariant = null;
-		
-		List<Holder<PaintingVariant>> similarPaintingVariants = Util.getSimilarArt(currentVariant.value());
-		if (similarPaintingVariants.size() == 0) {
+		if (!(target instanceof Painting painting)) {
 			return InteractionResult.PASS;
 		}
 
-		if (player.isCrouching()) {
-			Collections.reverse(similarPaintingVariants);
-		}
-		
-		if (similarPaintingVariants.get(similarPaintingVariants.size()-1).equals(currentVariant)) {
-			newVariant = similarPaintingVariants.get(0);
-		}
-		else {
-			boolean choosenext = false;
-			for (Holder<PaintingVariant> similarVariant : similarPaintingVariants) {
-				if (choosenext) {
-					newVariant = similarVariant;
-					break;
-				}
-				if (similarVariant.equals(currentVariant)) {
-					choosenext = true;
-				}
-			}
-		}
-		
+		Holder<PaintingVariant> newVariant = Util.getNewPaintingVariant(player, painting.getVariant());
 		if (newVariant == null) {
 			return InteractionResult.PASS;
 		}
 
 		painting.setVariant(newVariant);
+
 		return InteractionResult.SUCCESS;
 	}
 }

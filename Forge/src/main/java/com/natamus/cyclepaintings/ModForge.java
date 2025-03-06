@@ -2,7 +2,9 @@ package com.natamus.cyclepaintings;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
+import com.natamus.collective.services.Services;
 import com.natamus.cyclepaintings.forge.config.IntegrateForgeConfig;
+import com.natamus.cyclepaintings.forge.events.ForgeBlockEvents;
 import com.natamus.cyclepaintings.forge.events.ForgePaintingEvent;
 import com.natamus.cyclepaintings.util.Reference;
 import net.minecraftforge.common.MinecraftForge;
@@ -33,6 +35,10 @@ public class ModForge {
 
 	private void loadComplete(final FMLLoadCompleteEvent event) {
     	MinecraftForge.EVENT_BUS.register(ForgePaintingEvent.class);
+
+		if (Services.MODLOADER.isModLoaded("fastpaintings")) {
+			MinecraftForge.EVENT_BUS.register(ForgeBlockEvents.class);
+		}
 	}
 
 	private static void setGlobalConstants() {
