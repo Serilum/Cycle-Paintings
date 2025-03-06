@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "cyclepaintings",
-  "version": "3.7",
+  "version": "4.1",
 
   "name": "Cycle Paintings",
   "description": "Easily cycle through placed paintings by right-clicking them with another painting.",
@@ -17,13 +17,16 @@
 
   "environment": "*",
   "entrypoints": { "main": [ "com.natamus.cyclepaintings.ModFabric" ], "modmenu": [ "com.natamus.cyclepaintings.fabric.config.IntegrateModMenu" ] },
+  "mixins": [
+	"cyclepaintings.mixins.json"
+  ],
 
   "depends": {
     "fabricloader": ">=0.12.5",
     "fabric": "*",
     "minecraft": ">=1.20",
     "java": ">=17",
-    "collective": ">=7.91"
+    "collective": ">=7.94"
   },
 
   "custom": {

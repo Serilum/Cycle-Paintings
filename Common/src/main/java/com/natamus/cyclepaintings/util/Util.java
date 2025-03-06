@@ -8,8 +8,10 @@ import net.minecraft.resources.ResourceKey;
 import net.minecraft.resources.ResourceLocation;
 import net.minecraft.tags.PaintingVariantTags;
 import net.minecraft.world.entity.decoration.PaintingVariant;
+import net.minecraft.world.entity.player.Player;
 
 import java.util.ArrayList;
+import java.util.Collections;
 import java.util.List;
 import java.util.Optional;
 
@@ -85,5 +87,33 @@ public class Util {
 		}
 		
 		return similarVariants;
+	}
+
+	public static Holder<PaintingVariant> getNewPaintingVariant(Player player, Holder<PaintingVariant> currentVariant) {
+		List<Holder<PaintingVariant>> similarPaintingVariants = Util.getSimilarArt(currentVariant.value());
+		if (similarPaintingVariants.isEmpty()) {
+			return null;
+		}
+
+		if (player.isCrouching()) {
+			Collections.reverse(similarPaintingVariants);
+		}
+
+		if (similarPaintingVariants.get(similarPaintingVariants.size()-1).equals(currentVariant)) {
+			return similarPaintingVariants.get(0);
+		}
+		else {
+			boolean choosenext = false;
+			for (Holder<PaintingVariant> similarVariant : similarPaintingVariants) {
+				if (choosenext) {
+					return similarVariant;
+				}
+				if (similarVariant.equals(currentVariant)) {
+					choosenext = true;
+				}
+			}
+		}
+
+		return null;
 	}
 }
