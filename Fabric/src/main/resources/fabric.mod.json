@@ -1,0 +1,55 @@
+{
+  "schemaVersion": 1,
+  "id": "cyclepaintings",
+  "version": "4.1",
+
+  "name": "Cycle Paintings",
+  "description": "Easily cycle through placed paintings by right-clicking them with another painting.",
+  "authors": [ "Rick South" ],
+  "contact": {
+    "homepage": "https://serilum.com/mod/cycle-paintings",
+    "sources": "https://github.com/Serilum/Cycle-Paintings",
+    "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Cycle%20Paintings"
+  },
+
+  "license": "All Right Reserved",
+  "icon": "icon.png",
+
+  "environment": "*",
+  "entrypoints": { "main": [ "com.natamus.cyclepaintings.ModFabric" ], "modmenu": [ "com.natamus.cyclepaintings.fabric.config.IntegrateModMenu" ] },
+
+  "depends": {
+    "fabricloader": ">=0.18.0",
+    "fabric-api": "*",
+    "minecraft": ">=26.1",
+    "java": ">=25",
+    "collective": ">=8.16"
+  },
+
+  "custom": {
+    "modmenu": {
+      "links": {
+        "Donate <3" : "https://serilum.com/donate"
+      }
+    }
+  },
+
+  "contributors": [
+	  " ",
+	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
+	  " ",
+	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  " ",
+	  "Membership sponsors:",
+	  " akanealw",
+	  " Alister",
+	  " Andrean Olgo",
+	  " aternosorg",
+	  " Cherriesaurus",
+	  " MWS",
+	  " t128",
+	  " Tyler Behl",
+	  " XAgent",
+	  " ตัวตรึง พระนคร"
+  ]
+}
