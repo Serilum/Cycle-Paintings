@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "cyclepaintings",
-  "version": "4.1",
+  "version": "4.2",
 
   "name": "Cycle Paintings",
   "description": "Easily cycle through placed paintings by right-clicking them with another painting.",
@@ -23,7 +23,7 @@
     "fabric-api": "*",
     "minecraft": ">=1.21",
     "java": ">=21",
-    "collective": ">=8.13"
+    "collective": ">=8.19"
   },
 
   "custom": {
@@ -41,15 +41,13 @@
 	  "If you would like to contribute too, check out https://serilum.com/donate.",
 	  " ",
 	  "Membership sponsors:",
-	  " Alister",
+	  " akanealw",
 	  " Andrean Olgo",
 	  " aternosorg",
 	  " Cherriesaurus",
-	  " Michael W. S.",
+	  " MWS",
 	  " t128",
 	  " Tyler Behl",
-	  " William Innes",
-	  " XAgent",
-	  " ตัวตรึง พระนคร"
+	  " XAgent"
   ]
 }
