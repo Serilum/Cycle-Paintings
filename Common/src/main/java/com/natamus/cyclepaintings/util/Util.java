@@ -19,9 +19,7 @@ public class Util {
 	private static final List<Holder<PaintingVariant>> allPaintingVariants = new ArrayList<Holder<PaintingVariant>>();
 	
 	public static void setPaintings(Registry<PaintingVariant> paintingRegistry) {
-		if (!allPaintingVariants.isEmpty()) {
-			return;
-		}
+		allPaintingVariants.clear();
 
 		String[] allignore = ConfigHandler.ignorePaintingsInCycleResourceLocation.split(",");
 		boolean debug = ConfigHandler.showRegisteredPaintingsDebug;
@@ -99,7 +97,7 @@ public class Util {
 			Collections.reverse(similarPaintingVariants);
 		}
 
-		if (similarPaintingVariants.get(similarPaintingVariants.size()-1).equals(currentVariant)) {
+		if (similarPaintingVariants.get(similarPaintingVariants.size()-1).value().equals(currentVariant.value())) {
 			return similarPaintingVariants.get(0);
 		}
 		else {
@@ -108,7 +106,7 @@ public class Util {
 				if (choosenext) {
 					return similarVariant;
 				}
-				if (similarVariant.equals(currentVariant)) {
+				if (similarVariant.value().equals(currentVariant.value())) {
 					choosenext = true;
 				}
 			}
