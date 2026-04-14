@@ -1,7 +1,7 @@
 {
   "schemaVersion": 1,
   "id": "cyclepaintings",
-  "version": "4.1",
+  "version": "4.2",
 
   "name": "Cycle Paintings",
   "description": "Easily cycle through placed paintings by right-clicking them with another painting.",
@@ -23,7 +23,7 @@
     "fabric-api": "*",
     "minecraft": ">=26.1",
     "java": ">=25",
-    "collective": ">=8.17"
+    "collective": ">=8.19"
   },
 
   "custom": {
@@ -42,14 +42,12 @@
 	  " ",
 	  "Membership sponsors:",
 	  " akanealw",
-	  " Alister",
 	  " Andrean Olgo",
 	  " aternosorg",
 	  " Cherriesaurus",
 	  " MWS",
 	  " t128",
 	  " Tyler Behl",
-	  " XAgent",
-	  " ตัวตรึง พระนคร"
+	  " XAgent"
   ]
 }

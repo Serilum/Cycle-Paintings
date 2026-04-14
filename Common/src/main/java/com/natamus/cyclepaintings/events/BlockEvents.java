@@ -95,14 +95,17 @@ public class BlockEvents {
         Holder<PaintingVariant> paintingVariantHolder = paintingVariantRegistry.wrapAsHolder(optionalPaintingVariant.get());
 
         Holder<PaintingVariant> newVariantHolder = Util.getNewPaintingVariant(player, paintingVariantHolder);
+        if (newVariantHolder == null) {
+            return true;
+        }
         PaintingVariant newVariant = newVariantHolder.value();
 
         BlockPos newPaintingPosition = masterPosition.mutable();
-        if (newVariant.height() > 1 || newVariant.width() > 2) {
-            newPaintingPosition = newPaintingPosition.below();
+        if (newVariant.height() > 1) {
+            newPaintingPosition = newPaintingPosition.below(newVariant.height() / 2);
         }
         if (newVariant.width() > 2) {
-            newPaintingPosition = newPaintingPosition.relative(facing.getCounterClockWise(), 1);
+            newPaintingPosition = newPaintingPosition.relative(facing.getCounterClockWise(), newVariant.width() / 2);
         }
 
         level.setBlock(masterPosition, Blocks.AIR.defaultBlockState(), 3);
