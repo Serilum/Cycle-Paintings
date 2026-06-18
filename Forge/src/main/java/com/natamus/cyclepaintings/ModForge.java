@@ -7,7 +7,6 @@ import com.natamus.cyclepaintings.forge.config.IntegrateForgeConfig;
 import com.natamus.cyclepaintings.forge.events.ForgeBlockEvents;
 import com.natamus.cyclepaintings.forge.events.ForgePaintingEvent;
 import com.natamus.cyclepaintings.util.Reference;
-import net.minecraftforge.common.MinecraftForge;
 import net.minecraftforge.eventbus.api.bus.BusGroup;
 import net.minecraftforge.fml.common.Mod;
 import net.minecraftforge.fml.event.lifecycle.FMLLoadCompleteEvent;
