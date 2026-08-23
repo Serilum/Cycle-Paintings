@@ -23,7 +23,7 @@ public class NeoForgePaintingEvent {
 	}
 
 	@SubscribeEvent
-	public static void onClick(PlayerInteractEvent.EntityInteractSpecific e) {
+	public static void onClick(PlayerInteractEvent.EntityInteract e) {
 		Player player = e.getEntity();
 		if (PaintingEvent.onClick(player, e.getLevel(), e.getHand(), e.getTarget(), null).equals(InteractionResult.SUCCESS)) {
 			player.swing(e.getHand());
