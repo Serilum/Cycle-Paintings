@@ -7,6 +7,7 @@ import com.natamus.cyclepaintings.util.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.neoforged.bus.api.SubscribeEvent;
 import net.neoforged.neoforge.event.entity.player.PlayerInteractEvent;
 import net.neoforged.neoforge.event.server.ServerStartedEvent;
@@ -26,7 +27,7 @@ public class NeoForgePaintingEvent {
 	public static void onClick(PlayerInteractEvent.EntityInteract e) {
 		Player player = e.getEntity();
 		if (PaintingEvent.onClick(player, e.getLevel(), e.getHand(), e.getTarget(), null).equals(InteractionResult.SUCCESS)) {
-			player.swing(e.getHand());
+			player.swingAndResetAttackStrength(e.getHand(), SwingAnimation.DEFAULT, false);
 		}
 	}
 }
