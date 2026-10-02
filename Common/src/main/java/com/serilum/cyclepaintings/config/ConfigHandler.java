@@ -1,7 +1,7 @@
-package com.natamus.cyclepaintings.config;
+package com.serilum.cyclepaintings.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.cyclepaintings.util.Reference;
+import com.serilum.cyclepaintings.util.Reference;
 
 import java.util.Arrays;
 import java.util.HashMap;

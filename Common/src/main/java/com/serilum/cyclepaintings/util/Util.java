@@ -1,7 +1,7 @@
-package com.natamus.cyclepaintings.util;
+package com.serilum.cyclepaintings.util;
 
-import com.natamus.cyclepaintings.config.ConfigHandler;
-import com.natamus.cyclepaintings.data.Constants;
+import com.serilum.cyclepaintings.config.ConfigHandler;
+import com.serilum.cyclepaintings.data.Constants;
 import net.minecraft.core.Holder;
 import net.minecraft.core.Registry;
 import net.minecraft.resources.ResourceKey;

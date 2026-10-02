@@ -1,6 +1,6 @@
-package com.natamus.cyclepaintings;
+package com.serilum.cyclepaintings;
 
-import com.natamus.cyclepaintings.config.ConfigHandler;
+import com.serilum.cyclepaintings.config.ConfigHandler;
 
 public class ModCommon {
 

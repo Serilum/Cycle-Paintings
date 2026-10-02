@@ -1,6 +1,6 @@
-package com.natamus.cyclepaintings.forge.events;
+package com.serilum.cyclepaintings.forge.events;
 
-import com.natamus.cyclepaintings.events.BlockEvents;
+import com.serilum.cyclepaintings.events.BlockEvents;
 import net.minecraftforge.event.entity.player.PlayerInteractEvent;
 import net.minecraftforge.eventbus.api.SubscribeEvent;
 

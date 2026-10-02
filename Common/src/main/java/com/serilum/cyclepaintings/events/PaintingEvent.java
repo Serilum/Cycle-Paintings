@@ -1,6 +1,6 @@
-package com.natamus.cyclepaintings.events;
+package com.serilum.cyclepaintings.events;
 
-import com.natamus.cyclepaintings.util.Util;
+import com.serilum.cyclepaintings.util.Util;
 import net.minecraft.core.Holder;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;

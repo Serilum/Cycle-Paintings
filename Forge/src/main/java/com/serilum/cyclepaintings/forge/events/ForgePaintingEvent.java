@@ -1,9 +1,9 @@
-package com.natamus.cyclepaintings.forge.events;
+package com.serilum.cyclepaintings.forge.events;
 
-import com.natamus.cyclepaintings.data.Constants;
-import com.natamus.cyclepaintings.events.PaintingEvent;
-import com.natamus.cyclepaintings.util.Reference;
-import com.natamus.cyclepaintings.util.Util;
+import com.serilum.cyclepaintings.data.Constants;
+import com.serilum.cyclepaintings.events.PaintingEvent;
+import com.serilum.cyclepaintings.util.Reference;
+import com.serilum.cyclepaintings.util.Util;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.player.Player;

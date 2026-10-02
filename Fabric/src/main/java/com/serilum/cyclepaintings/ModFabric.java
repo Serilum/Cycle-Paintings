@@ -1,14 +1,14 @@
-package com.natamus.cyclepaintings;
+package com.serilum.cyclepaintings;
 
 import com.natamus.collective.check.RegisterMod;
 import com.natamus.collective.check.ShouldLoadCheck;
 import com.natamus.collective.fabric.callbacks.CollectiveBlockEvents;
 import com.natamus.collective.services.Services;
-import com.natamus.cyclepaintings.data.Constants;
-import com.natamus.cyclepaintings.events.BlockEvents;
-import com.natamus.cyclepaintings.events.PaintingEvent;
-import com.natamus.cyclepaintings.util.Reference;
-import com.natamus.cyclepaintings.util.Util;
+import com.serilum.cyclepaintings.data.Constants;
+import com.serilum.cyclepaintings.events.BlockEvents;
+import com.serilum.cyclepaintings.events.PaintingEvent;
+import com.serilum.cyclepaintings.util.Reference;
+import com.serilum.cyclepaintings.util.Util;
 import net.fabricmc.api.ModInitializer;
 import net.fabricmc.fabric.api.event.lifecycle.v1.ServerLifecycleEvents;
 import net.fabricmc.fabric.api.event.player.UseEntityCallback;

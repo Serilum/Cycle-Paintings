@@ -1,7 +1,7 @@
-package com.natamus.cyclepaintings.forge.config;
+package com.serilum.cyclepaintings.forge.config;
 
 import com.natamus.collective.config.DuskConfig;
-import com.natamus.cyclepaintings.util.Reference;
+import com.serilum.cyclepaintings.util.Reference;
 import net.minecraftforge.client.ConfigScreenHandler;
 import net.minecraftforge.fml.ModLoadingContext;
 
