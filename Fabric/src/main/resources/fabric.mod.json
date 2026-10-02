@@ -1,11 +1,11 @@
 {
   "schemaVersion": 1,
   "id": "cyclepaintings",
-  "version": "4.3",
+  "version": "4.4",
 
   "name": "Cycle Paintings",
   "description": "Easily cycle through placed paintings by right-clicking them with another painting.",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/cycle-paintings",
     "sources": "https://github.com/Serilum/Cycle-Paintings",
@@ -16,14 +16,14 @@
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.cyclepaintings.ModFabric" ], "modmenu": [ "com.natamus.cyclepaintings.fabric.config.IntegrateModMenu" ] },
+  "entrypoints": { "main": [ "com.serilum.cyclepaintings.ModFabric" ], "modmenu": [ "com.serilum.cyclepaintings.fabric.config.IntegrateModMenu" ] },
 
   "depends": {
     "fabricloader": ">=0.18.0",
     "fabric-api": "*",
     "minecraft": ">=26.3",
     "java": ">=25",
-    "collective": ">=8.39"
+    "collective": ">=8.40"
   },
 
   "custom": {
@@ -38,7 +38,7 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
 	  " Andrean Olgo",
