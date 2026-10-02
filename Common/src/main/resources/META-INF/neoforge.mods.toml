@@ -1,28 +1,28 @@
 modLoader="javafml"
 loaderVersion="*"
-license="All rights reserved"
+license="All Rights Reserved"
 issueTrackerURL="https://github.com/Serilum/.issue-tracker/labels/Mod:%20Cycle%20Paintings"
 logoFile="icon.png"
 
 [[mods]]
 modId="cyclepaintings"
-version="4.2"
+version="4.4"
 displayName="Cycle Paintings"
 displayURL="https://serilum.com/mod/cycle-paintings"
-authors="Rick South"
+authors="Serilum"
 description='''Easily cycle through placed paintings by right-clicking them with another painting.
 '''
 credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
 
-akanealw, Andrean Olgo, aternosorg, Cherriesaurus, MWS, t128, Tyler Behl, XAgent   
+Andrean Olgo, AnyankaT, aternosorg, Cherriesaurus, Linda Jansen, MWS, Tyler Behl   
 
-If you would like to contribute too, check out https://serilum.com/donate. Appreciate it! <3   
+If you would like to contribute too, check out https://serilum.com/donate Appreciate it! <3   
 '''
 
 [[dependencies.cyclepaintings]]
     modId="collective"
     type="required"
-    versionRange="[8.19,)"
+    versionRange="[8.40,)"
     ordering="NONE"
     side="BOTH"
 

@@ -1,22 +1,22 @@
 {
   "schemaVersion": 1,
   "id": "cyclepaintings",
-  "version": "4.2",
+  "version": "4.4",
 
   "name": "Cycle Paintings",
   "description": "Easily cycle through placed paintings by right-clicking them with another painting.",
-  "authors": [ "Rick South" ],
+  "authors": [ "Serilum" ],
   "contact": {
     "homepage": "https://serilum.com/mod/cycle-paintings",
     "sources": "https://github.com/Serilum/Cycle-Paintings",
     "issues": "https://github.com/Serilum/.issue-tracker/labels/Mod:%20Cycle%20Paintings"
   },
 
-  "license": "All Right Reserved",
+  "license": "All Rights Reserved",
   "icon": "icon.png",
 
   "environment": "*",
-  "entrypoints": { "main": [ "com.natamus.cyclepaintings.ModFabric" ], "modmenu": [ "com.natamus.cyclepaintings.fabric.config.IntegrateModMenu" ] },
+  "entrypoints": { "main": [ "com.serilum.cyclepaintings.ModFabric" ], "modmenu": [ "com.serilum.cyclepaintings.fabric.config.IntegrateModMenu" ] },
   "mixins": [
 	"cyclepaintings.mixins.json"
   ],
@@ -26,13 +26,13 @@
     "fabric": "*",
     "minecraft": ">=1.21",
     "java": ">=21",
-    "collective": ">=8.19"
+    "collective": ">=8.40"
   },
 
   "custom": {
     "modmenu": {
       "links": {
-        "Donate <3" : "https://ricksouth.com/donate"
+        "Donate <3" : "https://serilum.com/donate"
       }
     }
   },
@@ -41,16 +41,15 @@
 	  " ",
 	  "Thank you very much to my Membership sponsors for supporting the development of this mod!",
 	  " ",
-	  "If you would like to contribute too, check out https://serilum.com/donate.",
+	  "If you would like to contribute too, check out https://serilum.com/donate",
 	  " ",
 	  "Membership sponsors:",
-	  " akanealw",
 	  " Andrean Olgo",
+	  " AnyankaT",
 	  " aternosorg",
 	  " Cherriesaurus",
+	  " Linda Jansen",
 	  " MWS",
-	  " t128",
-	  " Tyler Behl",
-	  " XAgent"
+	  " Tyler Behl"
   ]
 }
