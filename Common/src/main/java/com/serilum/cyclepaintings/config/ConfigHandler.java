@@ -12,6 +12,7 @@ public class ConfigHandler extends DuskConfig {
 
 	@Entry public static String ignorePaintingsInCycleIdentifier = "infernalexp,";
 	@Entry public static boolean showRegisteredPaintingsDebug = false;
+	@Entry public static boolean showParticlesOnCycle = true;
 
 	public static void initConfig() {
 		configMetaData.put("ignorePaintingsInCycleIdentifier", Arrays.asList(
@@ -19,6 +20,9 @@ public class ConfigHandler extends DuskConfig {
 		));
 		configMetaData.put("showRegisteredPaintingsDebug", Arrays.asList(
 			"When enabled, prints all paintings registered to the console. With this you can find which to add to the 'ignorePaintingsInCycleIdentifierPrefix' config."
+		));
+		configMetaData.put("showParticlesOnCycle", Arrays.asList(
+			"Whether a small particle effect shows when a painting is cycled."
 		));
 
 		DuskConfig.init(Reference.NAME, Reference.MOD_ID, ConfigHandler.class);

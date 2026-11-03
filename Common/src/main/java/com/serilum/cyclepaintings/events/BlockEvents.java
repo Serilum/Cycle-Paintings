@@ -1,7 +1,6 @@
 package com.serilum.cyclepaintings.events;
 
 import com.mojang.datafixers.util.Pair;
-import com.natamus.collective.functions.TaskFunctions;
 import com.serilum.cyclepaintings.util.Util;
 import net.minecraft.IdentifierException;
 import net.minecraft.core.BlockPos;
@@ -11,15 +10,15 @@ import net.minecraft.core.Registry;
 import net.minecraft.core.registries.Registries;
 import net.minecraft.nbt.CompoundTag;
 import net.minecraft.resources.Identifier;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
-import net.minecraft.world.entity.decoration.painting.Painting;
 import net.minecraft.world.entity.decoration.painting.PaintingVariant;
 import net.minecraft.world.entity.player.Player;
 import net.minecraft.world.item.ItemStack;
 import net.minecraft.world.item.Items;
+import net.minecraft.world.item.component.SwingAnimation;
 import net.minecraft.world.level.Level;
 import net.minecraft.world.level.block.Block;
-import net.minecraft.world.level.block.Blocks;
 import net.minecraft.world.level.block.EntityBlock;
 import net.minecraft.world.level.block.entity.BlockEntity;
 import net.minecraft.world.level.block.state.BlockState;
@@ -98,24 +97,21 @@ public class BlockEvents {
 		if (newVariantHolder == null) {
 			return true;
 		}
-		PaintingVariant newVariant = newVariantHolder.value();
 
-		BlockPos newPaintingPosition = masterPosition.mutable();
-		if (newVariant.height() > 1) {
-			newPaintingPosition = newPaintingPosition.below(newVariant.height() / 2);
-		}
-		if (newVariant.width() > 2) {
-			newPaintingPosition = newPaintingPosition.relative(facing.getCounterClockWise(), newVariant.width() / 2);
+		Identifier newVariantIdentifier = paintingVariantRegistry.getKey(newVariantHolder.value());
+		if (newVariantIdentifier == null) {
+			return true;
 		}
 
-		level.setBlock(masterPosition, Blocks.AIR.defaultBlockState(), 3);
+		Util.setFastPaintingsVariant(level, paintingBlockEntity, newVariantIdentifier);
+		player.swing(hand, SwingAnimation.DEFAULT, true);
 
-		BlockPos finalNewPaintingPosition = newPaintingPosition.immutable();
-		TaskFunctions.enqueueCollectiveServerTask(level.getServer(), () -> {
-			level.addFreshEntity(new Painting(level, finalNewPaintingPosition, facing, newVariantHolder));
-		}, 0);
+		if (level instanceof ServerLevel serverLevel) {
+			PaintingVariant newVariant = newVariantHolder.value();
+			Util.spawnCycleParticles(serverLevel, Util.getFastPaintingCenter(masterPosition, facing, newVariant), facing, newVariant);
+		}
 
-		return true;
+		return false;
 	}
 
 	@SuppressWarnings("unchecked")

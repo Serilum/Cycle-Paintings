@@ -34,7 +34,7 @@ public class ForgePaintingEvent {
 	public static void onClick(PlayerInteractEvent.EntityInteractSpecific e) {
 		Player player = e.getEntity();
 		if (PaintingEvent.onClick(player, e.getLevel(), e.getHand(), e.getTarget(), null).equals(InteractionResult.SUCCESS)) {
-			player.swingAndResetAttackStrength(e.getHand(), SwingAnimation.DEFAULT, false);
+			player.swing(e.getHand(), SwingAnimation.DEFAULT, false);
 		}
 	}
 }
