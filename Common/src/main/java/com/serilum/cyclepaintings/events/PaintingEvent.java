@@ -2,6 +2,7 @@ package com.serilum.cyclepaintings.events;
 
 import com.serilum.cyclepaintings.util.Util;
 import net.minecraft.core.Holder;
+import net.minecraft.server.level.ServerLevel;
 import net.minecraft.world.InteractionHand;
 import net.minecraft.world.InteractionResult;
 import net.minecraft.world.entity.Entity;
@@ -30,6 +31,10 @@ public class PaintingEvent {
 		}
 
 		painting.setVariant(newVariant);
+
+		if (level instanceof ServerLevel serverLevel) {
+			Util.spawnCycleParticles(serverLevel, painting.getBoundingBox().getCenter(), painting.getDirection(), newVariant.value());
+		}
 
 		return InteractionResult.SUCCESS;
 	}
