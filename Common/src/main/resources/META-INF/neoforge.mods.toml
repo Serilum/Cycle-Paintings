@@ -6,7 +6,7 @@ logoFile="icon.png"
 
 [[mods]]
 modId="cyclepaintings"
-version="4.4"
+version="5.0"
 displayName="Cycle Paintings"
 displayURL="https://serilum.com/mod/cycle-paintings"
 authors="Serilum"
@@ -14,7 +14,7 @@ description='''Easily cycle through placed paintings by right-clicking them with
 '''
 credits='''Thank you very much to my Membership sponsors for supporting the development of this mod:  
 
-AnyankaT, aternosorg, Cherriesaurus, Linda Jansen, MWS, Tyler Behl   
+aternosorg, Cherriesaurus, Linda Jansen, MWS, Tyler Behl   
 
 If you would like to contribute too, check out https://serilum.com/donate Appreciate it! <3   
 '''
@@ -22,7 +22,7 @@ If you would like to contribute too, check out https://serilum.com/donate Apprec
 [[dependencies.cyclepaintings]]
     modId="collective"
     type="required"
-    versionRange="[8.67,)"
+    versionRange="[8.77,)"
     ordering="NONE"
     side="BOTH"
 
